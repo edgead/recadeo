@@ -1,0 +1,16 @@
+{% extends 'adminlte/lib/_styles.html' %}
+{% load static %}
+{% block styles %}
+    {{ block.super }}
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static "dashboard/css/ionicons.min.css" %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.0.0/css/bootstrap-slider.css" />
+    <link rel="stylesheet" type="text/css" href="{% static "dashboard/css/app.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "dashboard/css/datatables.css" %}">
+    <link rel="stylesheet" type="text/css" href="{% static "dashboard/css/bootstrap-datepicker.min.css" %}">
+
+
+{% endblock %}

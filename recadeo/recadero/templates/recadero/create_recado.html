@@ -1,0 +1,89 @@
+{% extends 'recadero/base.html' %}
+{% block content %}
+    <h1 class="page-header">Crear Recado</h1>
+    <div class="row">
+        <form role="form">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Seleccione Pais o Ciudad de Salida</label>
+                    <input class="form-control" type="text" id="pais_ciudad" data-provide="typeahead" data-items="4"/>
+                </div>
+                <div class="form-group">
+                    <label>Telefono</label>
+                    <input class="form-control" type="text" id="telefono"/>
+                </div>
+                <label>Tipo de Carga a llevar</label>
+                <div class="form-group">
+
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="documentos">
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Documentos o Dinero
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="ligera">
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Carga ligera (-5kg)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="pesada">
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Carga pesada (+5kg)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="importacion">
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Importacion (+5kg)
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <label>Algo que aclarar al que enviará....</label>
+                    <textarea class="form-control" id="aclaracion" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Fecha Aproximada de Salida:</label>
+                    <div class="input-group date">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <input type="text" class="form-control pull-right" name="fecha_viaje"
+                               id="fecha_viaje">
+                    </div>
+                    <!-- /.input group -->
+                </div>
+                <div class="form-group">
+                    <label>Correo</label>
+                    <input class="form-control" type="text" id="correo"/>
+                </div>
+                <div class="form-group">
+                    <label>Seleccione Region en Cuba a donde se dirige</label>
+                    <input class="form-control" type="text" id="region_cuba" data-provide="typeahead" data-items="4"/>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-info">Crear Envio de Recado</button>
+            </div>
+
+        </form>
+    </div>
+{% endblock %}

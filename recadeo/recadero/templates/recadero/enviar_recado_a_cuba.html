@@ -1,0 +1,93 @@
+{% extends 'recadero/base.html' %}
+{% block content %}
+    <h1 class="page-header">Buscar recadero para enviar paquete a Cuba</h1>
+    <div class="row">
+        <form role="form">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Seleccione Pais o Ciudad de Salida del Recado</label>
+                    <input class="form-control" type="text" id="pais_ciudad" data-provide="typeahead" data-items="4"/>
+                </div>
+                <label>Tipo de Carga que desea enviar</label>
+                <div class="form-group">
+
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="documentos">
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Documentos o Dinero
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="ligera">
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Carga ligera (-5kg)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="pesada">
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Carga pesada (+5kg)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="importacion">
+                                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                                Importacion (+5kg)
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    <label>Rango de fecha aproximada que desea enviar el Recado:</label>
+                    <div class="col-md-6">
+
+                        <div class="input-group date">
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="text" class="form-control pull-right" name="fecha_viaje"
+                                   id="fecha_viaje">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+
+                        <div class="input-group date">
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <input type="text" class="form-control pull-right" name="fecha_viaje"
+                                   id="fecha_viaje">
+                        </div>
+                    </div>
+
+                    <!-- /.input group -->
+                </div>
+
+                <div style="padding-top: 35px" class="form-group">
+                    <label>Seleccione Region en Cuba a donde se dirige el Recado</label>
+                    <input class="form-control" type="text" id="region_cuba" data-provide="typeahead" data-items="4"/>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-info">Buscar <i class="fa fa-search fa-fw"></i></button>
+            </div>
+
+        </form>
+    </div>
+{% endblock %}

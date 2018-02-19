@@ -1,0 +1,37 @@
+{% load static %}
+
+{% block scripts %}
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="{% static 'vendor/metisMenu/metisMenu.js' %}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{% static 'dist/js/sb-admin-2.js' %}"></script>
+
+    <script src="{% static 'recadero/js/bootstrap-typeahead.js' %}"></script>
+
+    <script src="{% static 'recadero/js/moment.min.js' %}"></script>
+
+    <script src="{% static 'js/bootstrap-datetimepicker.js' %}"></script>
+
+    <script src="{% static 'recadero/js/recado.js' %}"></script>
+
+    <script src="{% static 'node_modules/angular/angular.js' %}" type="text/javascript">
+
+
+    <script type="text/javascript">
+        $(function () {
+            $('#fecha_viaje').datetimepicker({
+                daysOfWeekDisabled: [0, 6],
+                format: 'YYYY-MM-DD'
+            })
+        });
+    </script>
+
+
+
+{% endblock %}

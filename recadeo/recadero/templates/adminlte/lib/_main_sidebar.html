@@ -1,0 +1,31 @@
+{% extends 'adminlte/lib/_main_sidebar.html' %}
+
+
+{% block nav_heading %}ORGANIZACION{% endblock %}
+
+{% block nav_links %}
+    {% if menu|length == 0 %}
+        <li class="treeview">
+            <a href="#">
+                <span class="text-red"><i class="fa text-red  fa-ban"></i> Acceso denegado... </span>
+
+            </a>
+        </li>
+    {% else %}
+        {% for m in menu %}
+            <li class="treeview">
+                <a href="{{ m.url }}">
+                    <i class="{{ m.icon }}"></i> <span>{{ m.title }}</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu" style="display: {{ m.ul_display }};">
+                    {% for i in m.items %}
+                        <li><a href="{{ i.url }}"><i class="{{ i.icon }}"></i> {{ i.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    {% endif %}
+{% endblock %}
